@@ -1,0 +1,22 @@
+  /* Grid */
+
+.col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    
+    @media only screen and (max-width: 767px) {
+      & {
+        width: 100% !important;
+      }
+    }
+}
+
+.column-3 {
+  width: 33.33333%;
+
+  @media only screen and (max-width: 767px) {
+    & {
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }
+}

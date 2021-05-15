@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Animal Adoptions</title>
+</head>
+
+<body>
+    <!-- <div class="gradient-border"> -->
+        <span id="hamburgerBtn">
+            &#9776;
+        </span>
+        <div id="overlay"></div>
+        <div id="mobileMenu" class="mobile-menu">
+            <ul class="mobile-menu--list">
+                <li class="mobile-menu--item">
+                    <a onclick="mobileMenuLinkClick()" href="#" class="mobile-menu--link btn btn__text">Home</a>
+                </li>
+                <li class="mobile-menu--item">
+                    <a onclick="mobileMenuLinkClick()" href="#" class="mobile-menu--link btn btn__text">Donations</a>
+                </li>
+                <li class="mobile-menu--item">
+                    <a onclick="mobileMenuLinkClick()" href="#" class="mobile-menu--link btn btn__text">FAQ</a>
+                </li>
+                <li class="mobile-menu--item">
+                    <a onclick="mobileMenuLinkClick()" href="#" class="mobile-menu--link btn btn__text">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <nav class="nav-menu">
+            <ul class="nav-menu--list">
+                <li class="nav-menu--link">
+                    <a href="/">Home</a>
+                </li>
+                <li class="nav-menu--link">
+                    <a href="#">Donations</a>
+                </li>
+                <li class="nav-menu--link">
+                    <a href="#">FAQ</a>
+                </li>
+                <li class="nav-menu--link">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-content--entry">
+            <div class="parent">
+                <div class="container">
+                    <div class="container__half col-1-of-2">
+                        <h2 class="heading__primary">Will You Adopt Me?</h2>
+                        <form class="form" autocomplete="off">
+                            <input class="form__field" type="text" id="firstName" name="firstName" placeholder="First name..." required>
+                            <input class="form__field" type="text" id="lastName" name="lastName" placeholder="Last name..." required>
+                            <textarea id="text__area" class="form__text--area" name="textarea" rows="4" cols="50" placeholder="Text here..."></textarea>
+                            <a onclick="sendMessageClick()" class="btn btn__text">Send Message</a>
+                        </form>
+
+                    </div>
+                    <div class="container__half col-1-of-2">
+                        <img class="image" alt="dog" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/dog.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank you popup -->
+            <div class="thank__you">
+                <div class="thank__you--div" id="thank__you">
+                    <div class="thank__you--content">
+                        <a onclick="closePopupMessage()" href="#" class="thank__you--link">&times;</a>
+                        <img class="thank__you--picture" src="css/images/howie-r-CjI_2QX7hvU-unsplash.jpg" alt="Thank You">
+                    </div>
+                </div>
+            </div>
+            <!-- Thank you popup end -->
+
+            <div class="section__donation">
+                <div class="section__donation--information">
+                    <p class="section__donation--text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+            </div>
+
+            <a class="section__donation--link" href="#">
+                <h2 class="heading__secondary">Make A Difference!</h2>
+            </a>
+        </div>
+        <footer class="section__footer">
+            <div class="copyright-section">
+                <div class="copyright-section--address column-3">
+                    <p>
+                        <span>123 Example St.</span>
+                        <br/>
+                        <span>Philadelphia, Pa. 18765</span>
+                    </p>
+
+                </div>
+                <div class="copyright-section--social_icons column-3">
+                    <ul class="copyright-section--social_icons_list">
+                        <li class="copyright-section--social_icons_item">
+                            <a href="#" target="_blank">
+                                <img src="css/images/iconfinder_Rounded_Facebook_svg_5282541.png" alt="Facebook" class="copyright-section--social_icons_icon">
+                            </a>
+                        </li>
+                        <li class="copyright-section--social_icons_item">
+                            <a href="#" target="_blank">
+                                <img src="css/images/iconfinder_Rounded_Instagram_svg_5282544.png" alt="Instagram" class="copyright-section--social_icons_icon">
+                            </a>
+                        </li>
+                        <li class="copyright-section--social_icons_item">
+                            <a href="#" target="_blank">
+                                <img src="css/images/iconfinder_Rounded_Linkedin2_svg_5282542.png" alt="Linkedin" class="copyright-section--social_icons_icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    <!-- </div> -->
+    <script src="src/index.js"></script>
+</body>
+
+</html>

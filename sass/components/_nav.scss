@@ -1,0 +1,123 @@
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s linear;
+}
+
+#overlay.open {
+    opacity: 1;
+    z-index: 1;
+}
+
+#hamburgerBtn {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    color: $color-white;
+    padding: 0 5px;
+    border: 2px solid $color-white;
+    display: none;
+    z-index: 100;
+
+    @media only screen and (max-width: 767px) {
+        & {
+            display: inline;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#mobileMenu {
+    transform: translateX(-250px);
+}
+
+#mobileMenu.open {
+    transform: translateX(0);
+    transition: transform .2s;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: inherit;
+    background-color: rgba(0, 0, 0, 1);
+    border-right: 2px solid $color-white;
+    border-bottom: 2px solid $color-white;
+    z-index: 100;
+
+    &--list {
+        padding-inline-start: 0px;
+        padding: 30px;
+        margin-block-start: 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    &--item {
+        list-style-type: none;
+        padding: 5px 0;
+    }
+
+    &--link {
+        text-decoration: none;
+    }
+}
+
+.nav-menu {
+    position: sticky;
+    top: 0;
+    background-color: $color-wild-caribbean-green;
+    // box-shadow: rgba(250, 250, 250, 0.4) 0px 5px, rgba(250, 250, 250, 0.3) 0px 10px, rgba(250, 250, 250, 0.2) 0px 15px, rgba(250, 250, 250, 0.1) 0px 20px, rgba(250, 250, 250, 0.05) 0px 25px;
+
+    &--list {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 6rem;
+        margin-block-start: 0px;
+    }
+
+    &--link {
+        padding: 1.5rem;
+        list-style: none;
+
+        & a {
+            text-decoration: none;
+            color: #fff;
+
+            &:hover {
+                color: $color-black;
+            }
+
+            &:after {
+                display: block;
+                content: '';
+                transform: scaleX(0);
+                padding-top: 5px;
+                border-bottom: 3px solid transparent;
+                transition: all .2s cubic-bezier(0,0,1,1);
+            }
+    
+            &:hover:after {
+                border-bottom: 3px solid $color-black;
+                transform: scaleX(1);
+                border-radius: 15px;
+            }
+
+            @media only screen and (max-width: 767px) {
+                & {
+                    display: none;
+                }
+            }
+        }
+    }
+}

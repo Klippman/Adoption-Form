@@ -1,0 +1,36 @@
+/* button css */
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    background-color: $color-dark-mountain-meadow;
+    border: 1px solid $color-dark-mountain-meadow;
+    box-shadow: 0 .5rem 1rem rgba($color-white, .4);
+    transition: all .2s;
+    outline: none;
+    display: inline-block;
+    left: .4rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    
+    &:link {
+        text-decoration: none;
+    }
+    
+    &:active {
+        transform: scale(.95);
+        color: $color-dark-mountain-meadow;
+        box-shadow: none;
+    }
+    
+    &:hover {
+        background-color: $color-white;
+        border: 1px solid $color-white;
+        color: $color-dark-mountain-meadow;
+    }
+    
+    &__text {
+        font-weight: 700;
+        font-size: 20px;
+        color: $color-white;
+    }
+}
